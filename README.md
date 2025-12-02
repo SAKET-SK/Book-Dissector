@@ -133,3 +133,106 @@ Make sure that your "public/index.html" contains:
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 ```
+
+---
+
+## API Endpoints:
+
+| Method |  Endpoint  |   Description   |
+|:------:|:----------:|:---------------:|
+| GET    | /api/books | Get all books   |
+| POST   | /api/books | Create new book |
+
+## Book Chapters:
+
+| Method |          Endpoint         |        Description       |
+|:------:|:-------------------------:|:------------------------:|
+| GET    | /api/chapters/:bookId     | Get chapters for book    |
+| POST   | /api/chapters/:bookId     | Add new chapter          |
+| GET    | /api/chapters/chapter/:id | Get full chapter details |
+
+---
+
+## Backend Code Overview
+
+### Book Model
+
+```js
+{
+  title: String,
+  author: String,
+  createdAt: Date
+}
+```
+
+### Chapter Model
+
+```js
+{
+  bookId: ObjectId,
+  title: String,
+  summary: String,
+  content: String,
+  createdAt: Date
+}
+```
+
+---
+
+## Frontend Code Overview
+
+Components:
+- BookCard.jsx → UI for each book card
+ -ChapterFlashCard.jsx → UI for chapter flashcards
+ -Navbar.jsx → App header
+
+Pages:
+- Books.jsx → Add/view books
+- Chapters.jsx → Add/view chapters
+- ChapterView.jsx → Full-page chapter reader
+
+---
+
+## 🧪 Testing the Application
+1. Add a book: Go to / → enter title + author → click Add Book
+2. Add a chapter: Open a book → fill fields → click Add Chapter
+3. Read chapter: Click on any flashcard → full chapter viewer opens
+
+---
+
+## 📝 Future Enhancements (Optional)
+
+- User login system
+- Tags & search filter
+ -Dark mode toggle
+- Export chapter as PDF
+- Autosave notes
+- AI-assisted book summaries
+- Markdown editor
+- Book cover uploads
+
+---
+
+## 🤝 Contributing
+
+- Fork the repo
+- Create a branch
+ -Write code
+- Submit a pull request
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+If you need:
+
+- UI revamp
+- New features
+- Deployment help
+- API extensions
+  
+Just open an issue or ask for enhancements.
